@@ -7,7 +7,7 @@ import store from './redux/store';
 
 function App() {
   return (
-    <Routes>
+    <Provider store={store}>
       <Route path="/" element={<Navigate to="/login" replace />} />
       <Route path="/login" element={<Login />} />
 
@@ -21,7 +21,7 @@ function App() {
       />
 
       <Route path="*" element={<Navigate to="/login" replace />} />
-    </Routes>
+    </Provider>
   );
 }
 export default App;
