@@ -42,7 +42,7 @@ export default function Login() {
   };
 
   return (
-    <div className="h-[100vh] w-100% flex justify-center items-center">
+    <div className="h-100% w-100% flex justify-center items-center">
       <div className="p-24 border-solid border-2 rounded-md">
         <h2>Login</h2>
 
