@@ -47,7 +47,7 @@ export default function Login() {
         <h2>Login</h2>
 
         {/* 아이디 입력칸 */}
-        <div className="mb-2 border-solid border-2 rounded-sm ">
+        <div className="mb-2 border-solid border-2 rounded-sm">
           <input
             type="text"
             placeholder="아이디 입력"
@@ -78,7 +78,7 @@ export default function Login() {
         {error && <p className="text-red-500 mt-10">{error}</p>}
 
         {/* 연습용 계정 안내 */}
-        <p className="mt-12 text-14">연습용 계정: admin / 5678</p>
+        <p className="mt-12 text-14">연습용 계정: admin / 1234</p>
 
       </div>
     </div>

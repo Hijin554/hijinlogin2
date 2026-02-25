@@ -30,7 +30,7 @@ export default function MyPage() {
         안녕하세요, <b>{username || '사용자'}</b>님 👋
       </p>
 
-      <button onClick={logout}>로그아웃</button>
+      <button className="bg-gray-200 border-solid border-2 rounded-sm" onClick={logout}>로그아웃</button>
     </div>
   );
 }
