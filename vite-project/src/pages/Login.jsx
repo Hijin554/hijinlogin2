@@ -47,7 +47,7 @@ export default function Login() {
         <h2>Login</h2>
 
         {/* 아이디 입력칸 */}
-        <div className="mb-2 border-solid border-2 rounded-sm">
+        <div className="mb-2 border-solid border-2 rounded-sm ">
           <input
             type="text"
             placeholder="아이디 입력"
