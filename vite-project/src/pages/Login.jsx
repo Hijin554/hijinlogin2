@@ -1,84 +1,78 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-    // 페이지 이동 리모컨
-    const nav = useNavigate();
+  // 페이지 이동 리모컨
+  const nav = useNavigate();
 
-    // 1) 입력값 저장 상자 (state)
-    const [id, setId] = useState("");       // 아이디 입력값
-    const [pw, setPw] = useState("");       // 비밀번호 입력값
-    const [error, setError] = useState(""); // 에러 문구
+  // 1) 입력값 저장 상자 (state)
+  const [id, setId] = useState(''); // 아이디 입력값
+  const [pw, setPw] = useState(''); // 비밀번호 입력값
+  const [error, setError] = useState(''); // 에러 문구
 
-    // 2) 로그인 버튼 눌렀을 때 실행
-    const handleLogin = () => {
-        console.log("로그인 버튼 클릭됨");
-        console.log("입력한 아이디:", id);
-        console.log("입력한 비밀번호:", pw);
+  // 2) 로그인 버튼 눌렀을 때 실행
+  const handleLogin = () => {
+    console.log('로그인 버튼 클릭됨');
+    console.log('입력한 아이디:', id);
+    console.log('입력한 비밀번호:', pw);
 
-        // 빈칸 검사 (기본)
-        if (id.trim() === "" || pw.trim() === "") {
-            setError("아이디와 비밀번호를 모두 입력해주세요.");
-            return;
-        }
+    // 빈칸 검사 (기본)
+    if (id.trim() === '' || pw.trim() === '') {
+      setError('아이디와 비밀번호를 모두 입력해주세요.');
+      return;
+    }
 
-        // 연습용 로그인 검사 (정답: admin / 1234)
-        if (id === "admin" && pw === "1234") {
-            // 로그인 성공 → localStorage 저장
-            localStorage.setItem("auth", "true");
-            localStorage.setItem("username", id);
+    // 연습용 로그인 검사 (정답: admin / 1234)
+    if (id === 'admin' && pw === '1234') {
+      // 로그인 성공 → localStorage 저장
+      localStorage.setItem('auth', 'true');
+      localStorage.setItem('username', id);
 
-            // 저장 확인(디버깅)
-            console.log("auth 저장됨:", localStorage.getItem("auth"));
-            console.log("username 저장됨:", localStorage.getItem("username"));
+      // 저장 확인(디버깅)
+      console.log('auth 저장됨:', localStorage.getItem('auth'));
+      console.log('username 저장됨:', localStorage.getItem('username'));
 
-            // 에러 문구 지우고 마이페이지로 이동
-            setError("");
-            nav("/mypage");
-        } else {
-            // 로그인 실패
-            setError("아이디 또는 비밀번호가 틀렸어요.");
-        }
-    };
+      // 에러 문구 지우고 마이페이지로 이동
+      setError('');
+      nav('/mypage');
+    } else {
+      // 로그인 실패
+      setError('아이디 또는 비밀번호가 틀렸어요.');
+    }
+  };
 
-    return (
-        <div style={{ padding: 24 }}>
-            <h2>Login</h2>
+  return (
+    <div style={{ padding: 24 }}>
+      <h2>Login</h2>
 
-            {/* 아이디 입력칸 */}
-            <div style={{ marginBottom: 8 }}>
-                <input
-                    type="text"
-                    placeholder="아이디 입력"
-                    value={id}
-                    onChange={(e) => setId(e.target.value)}
-                />
-            </div>
+      {/* 아이디 입력칸 */}
+      <div style={{ marginBottom: 8 }}>
+        <input
+          type="text"
+          placeholder="아이디 입력"
+          value={id}
+          onChange={(e) => setId(e.target.value)}
+        />
+      </div>
 
-            {/* 비밀번호 입력칸 */}
-            <div style={{ marginBottom: 8 }}>
-                <input
-                    type="password"
-                    placeholder="비밀번호 입력"
-                    value={pw}
-                    onChange={(e) => setPw(e.target.value)}
-                />
-            </div>
+      {/* 비밀번호 입력칸 */}
+      <div style={{ marginBottom: 8 }}>
+        <input
+          type="password"
+          placeholder="비밀번호 입력"
+          value={pw}
+          onChange={(e) => setPw(e.target.value)}
+        />
+      </div>
 
-            {/* 로그인 버튼 */}
-            <button onClick={handleLogin}>로그인</button>
+      {/* 로그인 버튼 */}
+      <button onClick={handleLogin}>로그인</button>
 
-            {/* 에러 메시지 (값이 있을 때만 보임) */}
-            {error && (
-                <p style={{ color: "red", marginTop: 10 }}>
-                    {error}
-                </p>
-            )}
+      {/* 에러 메시지 (값이 있을 때만 보임) */}
+      {error && <p style={{ color: 'red', marginTop: 10 }}>{error}</p>}
 
-            {/* 연습용 계정 안내 */}
-            <p style={{ marginTop: 12, fontSize: 14 }}>
-                연습용 계정: admin / 1234
-            </p>
-        </div>
-    );
+      {/* 연습용 계정 안내 */}
+      <p style={{ marginTop: 12, fontSize: 14 }}>연습용 계정: admin / 5678</p>
+    </div>
+  );
 }
