@@ -43,11 +43,11 @@ export default function Login() {
 
   return (
     <div className="h-[100vh] w-100% flex justify-center items-center">
-      <div className="p-24 border border-solid border-2">
+      <div className="p-24 border border-solid border-2 rounded-md">
         <h2>Login</h2>
 
         {/* 아이디 입력칸 */}
-        <div className="mb-2 border border-solid border-2">
+        <div className="mb-2 border border-solid border-2 rounded-sm">
           <input
             type="text"
             placeholder="아이디 입력"
@@ -57,7 +57,7 @@ export default function Login() {
         </div>
 
         {/* 비밀번호 입력칸 */}
-        <div className="mb-8 border border-solid border-2">
+        <div className="mb-8 border border-solid border-2 rounded-sm">
           <input
             type="password"
             placeholder="비밀번호 입력"
@@ -67,7 +67,7 @@ export default function Login() {
         </div>
 
         {/* 로그인 버튼 */}
-        <button className='bg-gray-200 border border-solid border-2' onClick={handleLogin}>로그인</button>
+        <button className='bg-gray-200 border border-solid border-2 rounded-sm' onClick={handleLogin}>로그인</button>
 
         {/* 에러 메시지 (값이 있을 때만 보임) */}
         {error && <p className="text-red-500 mt-10">{error}</p>}
