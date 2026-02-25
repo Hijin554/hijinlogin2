@@ -79,6 +79,7 @@ export default function Login() {
 
         {/* 연습용 계정 안내 */}
         <p className="mt-12 text-14">연습용 계정: admin / 5678</p>
+
       </div>
     </div>
   );
