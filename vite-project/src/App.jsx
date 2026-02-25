@@ -8,19 +8,21 @@ import store from './redux/store';
 function App() {
   return (
     <Provider store={store}>
-      <Route path="/" element={<Navigate to="/login" replace />} />
-      <Route path="/login" element={<Login />} />
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/login" element={<Login />} />
 
-      <Route
-        path="/mypage"
-        element={
-          <ProtectedRoute>
-            <MyPages />
-          </ProtectedRoute>
-        }
-      />
+        <Route
+          path="/mypage"
+          element={
+            <ProtectedRoute>
+              <MyPages />
+            </ProtectedRoute>
+          }
+        />
 
-      <Route path="*" element={<Navigate to="/login" replace />} />
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Routes>
     </Provider>
   );
 }
