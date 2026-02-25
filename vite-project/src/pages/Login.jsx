@@ -73,7 +73,7 @@ export default function Login() {
         {error && <p className="text-red-500 mt-4 text-sm text-center">{error}</p>}
 
         {/* 연습용 계정 안내 */}
-        <p className="mt-12 text-14">연습용 계정: admin / 5678</p>
+        <p className="mt-12 text-14">연습용 계정: admin / 1234</p>
 
       </div>
     </div>
