@@ -78,12 +78,14 @@ export default function Login() {
         {error && <p className="text-red-500 mt-4 text-sm text-center">{error}</p>}
 
         {/* 연습용 계정 안내 */}
+
         <p className="mt-4 text-sm text-pink-400 text-center">
           💡 연습용 계정: <span className="font-semibold">admin / 1234</span>
         </p>
 
         {/* 하단 장식 */}
         <div className="text-center mt-4 text-lg">🩷 ⋆｡°✩ ♡ ✩°｡⋆ 🩷</div>
+
       </div>
     </div>
   );
