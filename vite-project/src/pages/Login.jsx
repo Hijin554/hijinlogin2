@@ -14,7 +14,7 @@ export default function Login() {
     console.log('입력한 비밀번호:', pw);
 
     if (id.trim() === '' || pw.trim() === '') {
-      setError('아이디와 비밀번호를 모두 입력해주세요.');
+      setError('아이디와 비밀번호를 모두 입력해주세요 💦');
       return;
     }
 
@@ -22,51 +22,56 @@ export default function Login() {
       localStorage.setItem('auth', 'true');
       localStorage.setItem('username', id);
 
-      console.log('auth 저장됨:', localStorage.getItem('auth'));
-      console.log('username 저장됨:', localStorage.getItem('username'));
-
       setError('');
       nav('/mypage');
     } else {
-      setError('아이디 또는 비밀번호가 틀렸어요.');
+      setError('아이디 또는 비밀번호가 틀렸어요 🥺');
     }
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-pink-100">
-      <div className="w-full max-w-sm p-8 bg-white border-2 border-pink-200 rounded-2xl shadow-lg">
-        <h2 className="text-2xl font-bold text-center text-pink-500 mb-6">
+    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-b from-pink-100 to-rose-100">
+      <div className="w-full max-w-sm p-8 bg-white/90 border-2 border-pink-200 rounded-3xl shadow-xl">
+        {/* 상단 이모지 */}
+        <div className="text-center mb-2 text-3xl">💗✨🎀</div>
+
+        <h2 className="text-2xl font-bold text-center text-pink-500 mb-1">
           Login
         </h2>
+        <p className="text-center text-sm text-pink-400 mb-6">
+          환영해요 💕 로그인 해주세요
+        </p>
 
         {/* 아이디 입력칸 */}
         <div className="mb-3">
+          <label className="block text-sm text-pink-500 mb-1">👤 아이디</label>
           <input
             type="text"
             placeholder="아이디 입력"
             value={id}
             onChange={(e) => setId(e.target.value)}
-            className="w-full px-4 py-2 border-2 border-pink-200 rounded-lg bg-pink-50 placeholder:text-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300"
+            className="w-full px-4 py-2 border-2 border-pink-200 rounded-xl bg-pink-50 placeholder:text-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300"
           />
         </div>
 
         {/* 비밀번호 입력칸 */}
         <div className="mb-4">
+          <label className="block text-sm text-pink-500 mb-1">🔒 비밀번호</label>
           <input
             type="password"
             placeholder="비밀번호 입력"
             value={pw}
             onChange={(e) => setPw(e.target.value)}
-            className="w-full px-4 py-2 border-2 border-pink-200 rounded-lg bg-pink-50 placeholder:text-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300"
+            className="w-full px-4 py-2 border-2 border-pink-200 rounded-xl bg-pink-50 placeholder:text-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300"
           />
         </div>
 
         {/* 로그인 버튼 */}
         <button
-          className="w-full bg-pink-400 hover:bg-pink-500 text-white font-semibold py-2 rounded-lg border border-pink-500 transition"
+          className="w-full bg-pink-400 hover:bg-pink-500 text-white font-semibold py-2 rounded-xl border border-pink-500 transition shadow-sm"
           onClick={handleLogin}
         >
-          로그인
+          💖 로그인 하기
         </button>
 
         {/* 에러 메시지 */}
@@ -74,8 +79,11 @@ export default function Login() {
 
         {/* 연습용 계정 안내 */}
         <p className="mt-4 text-sm text-pink-400 text-center">
-          연습용 계정: admin / 1234
+          💡 연습용 계정: <span className="font-semibold">admin / 1234</span>
         </p>
+
+        {/* 하단 장식 */}
+        <div className="text-center mt-4 text-lg">🩷 ⋆｡°✩ ♡ ✩°｡⋆ 🩷</div>
       </div>
     </div>
   );
