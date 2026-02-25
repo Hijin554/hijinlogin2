@@ -74,7 +74,7 @@ export default function Login() {
 
         {/* 연습용 계정 안내 */}
         <p className="mt-12 text-14">연습용 계정: admin / 5678</p>
->>>>>>> 69182071967fdd15b46f76a9930a6db39ba860d1
+
       </div>
     </div>
   );
