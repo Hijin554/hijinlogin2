@@ -4,6 +4,7 @@ import MyPages from './pages/MyPages';
 import ProtectedRoute from './routes/ProtectedRoute';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import React from 'react';
 
 function App() {
   return (
