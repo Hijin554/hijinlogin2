@@ -42,40 +42,39 @@ export default function Login() {
   };
 
   return (
-    <div className="h-100vh w-100% flex justify-center items-center">
-      <div className="flex items-center justify-center">
-        <div className="p-24 ">
-          <h2>Login</h2>
+    <div className="h-[100vh] w-100% flex justify-center items-center">
+      <div className="p-24 border border-solid border-2">
+        <h2>Login</h2>
 
-          {/* 아이디 입력칸 */}
-          <div className="mb-8">
-            <input
-              type="text"
-              placeholder="아이디 입력"
-              value={id}
-              onChange={(e) => setId(e.target.value)}
-            />
-          </div>
-
-          {/* 비밀번호 입력칸 */}
-          <div className="mb-8">
-            <input
-              type="password"
-              placeholder="비밀번호 입력"
-              value={pw}
-              onChange={(e) => setPw(e.target.value)}
-            />
-          </div>
-
-          {/* 로그인 버튼 */}
-          <button onClick={handleLogin}>로그인</button>
-
-          {/* 에러 메시지 (값이 있을 때만 보임) */}
-          {error && <p className="text-red-500 mt-10">{error}</p>}
-
-          {/* 연습용 계정 안내 */}
-          <p className="mt-12 text-14">연습용 계정: admin / 5678</p>
+        {/* 아이디 입력칸 */}
+        <div className="mb-2 border border-solid border-2">
+          <input
+            type="text"
+            placeholder="아이디 입력"
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+          />
         </div>
+
+        {/* 비밀번호 입력칸 */}
+        <div className="mb-8 border border-solid border-2">
+          <input
+            type="password"
+            placeholder="비밀번호 입력"
+            value={pw}
+            onChange={(e) => setPw(e.target.value)}
+          />
+        </div>
+
+        {/* 로그인 버튼 */}
+        <button className='bg-gray-200 border border-solid border-2' onClick={handleLogin}>로그인</button>
+
+        {/* 에러 메시지 (값이 있을 때만 보임) */}
+        {error && <p className="text-red-500 mt-10">{error}</p>}
+
+        {/* 연습용 계정 안내 */}
+        <p className="mt-12 text-14">연습용 계정: admin / 5678</p>
+>>>>>>> 69182071967fdd15b46f76a9930a6db39ba860d1
       </div>
     </div>
   );
