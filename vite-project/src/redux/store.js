@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
+import authReducer from './authSlice';
 
 const store = configureStore({
   reducer: {
-    // 여기에 리듀서를 추가합니다.
+    auth: authReducer, // 'auth'라는 방에 authReducer를 배치
   },
 });
 
