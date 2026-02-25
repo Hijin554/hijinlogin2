@@ -2,6 +2,8 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import MyPage from "./pages/MyPages";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import { Provider } from "react-redux";
+
 
 function App() {
   return (
